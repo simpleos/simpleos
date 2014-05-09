@@ -12,7 +12,7 @@ boot/boot.bin: boot/boot.asm
 clean:
 	rm -f boot/*.bin
 
-test: 
+test: boot
 #	make clean
 #	make
 	$(EMU) boot/boot.bin
