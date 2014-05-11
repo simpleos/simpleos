@@ -16,7 +16,7 @@ boot/boot.bin: boot/boot.asm
 
 kernel: kernel/kernel.bin
 kernel/kernel.bin: kernel/kernel_entry.o kernel/kernel.o
-	$(LD) $(LDFLAGS) -o kernel/kernel.bin -Ttext 0x1000 $^ -format binary
+	$(LD) $(LDFLAGS) -o kernel/kernel.bin -Ttext 0x1000 $^ --oformat binary
 kernel/kernel.o: kernel/kernel.c
 	$(CC) $(CCFLAGS) -ffreestanding -c $< -o $@
 kernel/kernel_entry.o: kernel/kernel_entry.asm

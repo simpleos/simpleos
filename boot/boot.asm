@@ -22,6 +22,16 @@ KERNEL_OFFSET equ 0x1000        ; This is the memory offset to which we will loa
     call print_line
     call load_kernel
 
+; debug
+    mov bx, [KERNEL_OFFSET]
+    call print_hex
+    mov bx, [KERNEL_OFFSET + 8]
+    call print_hex
+    mov bx, [KERNEL_OFFSET + 16]
+    call print_hex
+    mov bx, [KERNEL_OFFSET + 24]
+    call print_hex
+
 ; switch to 32bit mode
     call switch_32bit
 
