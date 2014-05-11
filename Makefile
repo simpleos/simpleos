@@ -2,6 +2,7 @@
 ASM=nasm
 ASFLAGS=
 EMU=qemu-system-i386
+EMUFLAGS=
 
 all: boot
 
@@ -13,6 +14,8 @@ clean:
 	rm -f boot/*.bin
 
 test: boot
-#	make clean
-#	make
-	$(EMU) boot/boot.bin
+	$(EMU) $(EMUFLAGS) boot/boot.bin
+debug: boot
+	echo "Connect with gdb on port 1234 and than press 'c' to start execution."
+	echo "Use gdb to connect 'target remote localhost:1234' and set arch 'set architecture i8086'"
+	$(EMU) $(EMUFLAGS) -s -S boot/boot.bin
