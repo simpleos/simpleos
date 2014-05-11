@@ -1,2 +1,4 @@
 boot/*.bin
+kernel/*.o
+kernel/*.bin
 disk/*.img

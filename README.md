@@ -2,8 +2,8 @@ SimpleOS Bootloader
 ===================
 
 ## Dependencies
-
 * Assembler `nasm`
+* C Compiler `gcc`
 * CPU Emulator `qemu` (x86)
 
 ## Build

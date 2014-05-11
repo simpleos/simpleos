@@ -10,7 +10,7 @@ disk_read:
 
     mov ch, 0x0            ; cylinder 0
     mov dh, 0x0            ; head 0
-    mov cl, 0x1            ; sector 1 (starting with sector 1 as first sector)
+    mov cl, 0x2            ; sector 2 (starting with sector 1 as first sector)
 
     int 13h
     jc disk_error
@@ -23,6 +23,6 @@ disk_read:
     ret
 
 disk_error:
-    mov bx, SOS_VERSION_STR
+    mov bx, DISK_ERROR_STR
     call print_line
     jmp $
