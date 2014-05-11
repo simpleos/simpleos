@@ -25,6 +25,6 @@ clean-all: clean clean-disk
 test: boot disk
 	$(EMU) $(EMUFLAGS) boot/boot.bin
 debug: boot disk
-	echo "Connect with gdb on port 1234 and than press 'c' to start execution."
-	echo "Use gdb to connect 'target remote localhost:1234' and set arch 'set architecture i8086'"
+	echo "Connect with gdb on port 1234 and than press 'c' in gdb to start execution."
+	echo "Use 'target remote localhost:1234' in gdb to connect and set arch with 'set architecture i8086'"
 	$(EMU) $(EMUFLAGS) -s -S boot/boot.bin

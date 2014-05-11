@@ -14,3 +14,6 @@ make
 
 ## Test
 ```make test```
+
+## Debug
+```make debug```
