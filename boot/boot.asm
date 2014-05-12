@@ -10,6 +10,10 @@ KERNEL_OFFSET equ 0x1000        ; This is the memory offset to which we will loa
 ; store bootdrive
     mov [BOOTDRIVE], dl
 
+; setup stack
+    mov bp, 0x9000
+    mov sp, bp
+
 ; clear screen
     call clear_screen
 
@@ -67,10 +71,10 @@ BEGIN_32BIT:
 %include "boot/gdt.asm"
 
 
-section .data
+;section .data
 BOOTDRIVE:         db 0
 
-section .text
+;section .text
 DISK_ERROR_STR:    db "Disk read error!", 0
 NEW_LINE_STR:      db 0x0a, 0x0d, 0
 HEX_PREFIX_STR:    db "0x", 0
