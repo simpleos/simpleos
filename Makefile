@@ -1,13 +1,16 @@
-# config
+# default config
 ASM=nasm
 ASFLAGS=-I './boot/'
-CC=i386-elf-g++
+CC=g++
 CCFLAGS=-Wall -g -Wextra
-LD=i386-elf-ld
+LD=ld
 LDFLAGS=
 EMU=qemu-system-i386
 EMUFLAGS=-fdb disk/floppy.img -hdc disk/disk.img
 EMU_IMG=qemu-img
+
+# user config
+include Makefile.local
 
 # kernel files
 CPP_FILES := $(wildcard kernel/*.cpp drivers/*.cpp)
