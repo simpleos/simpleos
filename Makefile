@@ -1,15 +1,4 @@
-# default config
-ASM=nasm
-ASFLAGS=-I './boot/'
-CC=g++
-CCFLAGS=-Wall -g -Wextra
-LD=ld
-LDFLAGS=
-EMU=qemu-system-i386
-EMUFLAGS=-fdb disk/floppy.img -hdc disk/disk.img
-EMU_IMG=qemu-img
-
-# user config
+# config
 include Makefile.local
 
 # kernel files

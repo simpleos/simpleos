@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if [ ! -e "Makefile.local" ]
+then
+  cp Makefile.local.default Makefile.local
+fi
