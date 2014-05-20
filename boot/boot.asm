@@ -64,11 +64,11 @@ BEGIN_32BIT:
 ; endless loop
     jmp $
 
-%include "boot/16bit/screen.asm"
-%include "boot/16bit/disk.asm"
-%include "boot/16bit/switch_32bit.asm"
-%include "boot/32bit/screen.asm"
-%include "boot/gdt.asm"
+%include "16bit/screen.asm"
+%include "16bit/disk.asm"
+%include "16bit/switch_32bit.asm"
+%include "32bit/screen.asm"
+%include "gdt.asm"
 
 
 ;section .data
