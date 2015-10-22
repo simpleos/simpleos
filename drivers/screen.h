@@ -27,5 +27,13 @@ namespace sos
 
     public:
         static void clear();
+
+        static void put_char(char c);
+
+        static void move_cursor(size_t row, size_t column);
+
+    private:
+        static void clearRow(size_t row);
+        static void update_cursor();
     };
 }
